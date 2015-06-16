@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HoloPanel</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <!-- Panel -->
+    <string name="default_panel_view_text">(HoloPanel)</string>
+    <string name="default_picture_text">(Saved picture)</string>
+    <string name="default_weather_text">70&#xb0; - San Francisco, CA</string>
+    <string name="default_systemInfo_text">Time is 12:00am\n95% battery remaining</string>
+    <string name="default_email_text">3 new emails</string>
+    <string name="default_socialMedia_text">(Social media)</string>
+    <string name="default_socialMediaFacebook_text">3 new recent posts</string>
+    <string name="default_socialMediaTwitter_text">5 new recent tweets</string>
+
+</resources>

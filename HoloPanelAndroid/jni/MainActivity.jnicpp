@@ -1,0 +1,26 @@
+#include <jni.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+
+JNIEXPORT jlong JNICALL Java_com_abrahambotros_holopanel_MainActivity_createNativeController
+  (JNIEnv *, jobject)
+{
+	return (jlong) 0;
+}
+
+JNIEXPORT void JNICALL Java_com_abrahambotros_holopanel_MainActivity_destroyNativeController
+  (JNIEnv *, jobject, jlong)
+{
+}
+
+JNIEXPORT void JNICALL Java_com_abrahambotros_holopanel_MainActivity_handleFrame
+  (JNIEnv *, jobject, jlong, jlong)
+{
+}
+
+#ifdef __cplusplus
+}
+#endif

@@ -1,0 +1,236 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.abrahambotros.holopanel.MainActivity" >
+    <!-- android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" -->
+
+	<org.opencv.android.JavaCameraView
+	    android:id="@+id/camera_view"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:visibility="gone" />
+	
+	<ImageView 
+	    android:id="@+id/picture_view_icon"
+	    style="@style/PanelIconView"
+	    android:layout_marginLeft="390px"
+	    android:layout_marginTop="80px"
+	    android:src="@drawable/ic_image_white_24dp" />
+	<ImageView 
+	    android:id="@+id/weather_view_icon"
+	    style="@style/PanelIconView"
+	    android:layout_marginLeft="925px"
+	    android:layout_marginTop="80px"
+	    android:src="@drawable/ic_cloud_white_24dp" />
+	<ImageView 
+	    android:id="@+id/systemInfo_view_icon"
+	    style="@style/PanelIconView"
+	    android:layout_marginLeft="1450px"
+	    android:layout_marginTop="80px"
+	    android:src="@drawable/ic_info_outline_white_24dp" />
+	<ImageView 
+	    android:id="@+id/email_view_icon"
+	    style="@style/PanelIconView"
+	    android:layout_marginLeft="510px"
+	    android:layout_marginTop="920px"
+	    android:src="@drawable/ic_email_white_24dp" />
+	<ImageView 
+	    android:id="@+id/socialMedia_view_icon"
+	    style="@style/PanelIconView"
+	    android:layout_marginLeft="1340px"
+	    android:layout_marginTop="920px"
+	    android:src="@drawable/ic_people_white_24dp" />
+
+	<LinearLayout
+	    android:id="@+id/picture_view_container"
+	    style="@style/PanelViewContainer">
+	    <View
+	        style="@style/PanelVerticalSpacer"
+	        android:layout_weight="2" />
+	    <ImageView 
+	        android:id="@+id/picture_view_picture"
+	        style="@style/PanelImageView"
+	        android:layout_weight="6"
+	        android:src="@drawable/saved_picture" />
+	    <View
+	        style="@style/PanelVerticalSpacer"
+	        android:layout_weight="2" />
+	</LinearLayout>
+
+	<LinearLayout
+	    android:id="@+id/weather_view_container"
+	    style="@style/PanelViewContainer">
+	    <View
+	        style="@style/PanelVerticalSpacer"
+	        android:layout_weight="3.5" />
+		<ImageView
+		    android:id="@+id/weather_view_picture"
+		    style="@style/PanelImageView"
+		    android:layout_weight="2"
+		    android:src="@drawable/weather_sunny" />
+	    <TextView
+	        android:id="@+id/weather_view_text"
+	        style="@style/PanelTextView"
+		    android:layout_weight="1"
+	        android:text="@string/default_weather_text" />
+	    <View
+	        style="@style/PanelVerticalSpacer"
+	        android:layout_weight="3.5" />
+	</LinearLayout>
+
+	<LinearLayout
+	    android:id="@+id/systemInfo_view_container"
+	    style="@style/PanelViewContainer">
+	    <View
+	        style="@style/PanelVerticalSpacer"
+	        android:layout_weight="4" />
+	    <LinearLayout 
+	        android:orientation="horizontal"
+	        android:layout_width="match_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="1"
+	        android:weightSum="10">
+	        <View 
+	            style="@style/PanelHorizontalSpacer"
+	            android:layout_weight="3" />
+	        <ImageView 
+	            style="@style/PanelImageView"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="2"
+	            android:src="@drawable/ic_access_time_white_24dp"/>
+	        <ImageView 
+	            style="@style/PanelImageView"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="2"
+	            android:src="@drawable/ic_battery_std_white_24dp"/>
+	        <View 
+	            style="@style/PanelHorizontalSpacer"
+	            android:layout_weight="3" />
+	    </LinearLayout>
+	    <LinearLayout 
+	        android:orientation="horizontal"
+	        android:layout_width="match_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="1"
+	        android:weightSum="10">
+	        <View 
+	            style="@style/PanelHorizontalSpacer"
+	            android:layout_weight="3" />
+	        <TextView
+	            android:id="@+id/systemInfoTime_view_text"
+	            style="@style/PanelTextView"
+	            android:layout_height="match_parent"
+	            android:layout_width="0dp"
+	            android:layout_weight="2"
+	            android:text="@string/default_systemInfo_text" />
+	        <TextView
+	            android:id="@+id/systemInfoBattery_view_text"
+	            style="@style/PanelTextView"
+	            android:layout_height="match_parent"
+	            android:layout_width="0dp"
+	            android:layout_weight="2"
+	            android:text="@string/default_systemInfo_text" />
+	        <View 
+	            style="@style/PanelHorizontalSpacer"
+	            android:layout_weight="3" />
+	    </LinearLayout>
+	    <!--<TextView
+	        android:id="@+id/systemInfo_view_text"
+	        style="@style/PanelTextView"
+	        android:layout_weight="3"
+	        android:text="@string/default_systemInfo_text" />  -->
+	    <View
+	        style="@style/PanelVerticalSpacer"
+	        android:layout_weight="4" /> 
+	</LinearLayout>
+
+	<LinearLayout
+	    android:id="@+id/email_view_container"
+	    style="@style/PanelViewContainer">
+	    <View
+	        style="@style/PanelVerticalSpacer"
+	        android:layout_weight="4" />
+	    <ImageView
+	        android:id="@+id/email_view_picture"
+	        style="@style/PanelImageView"
+	        android:layout_weight="1"
+	        android:src="@drawable/gmail" />
+	    <TextView
+	        android:id="@+id/email_view_text"
+	        style="@style/PanelTextView"
+	        android:layout_weight="1"
+	        android:text="@string/default_email_text" />
+	    <View
+	        style="@style/PanelVerticalSpacer"
+	        android:layout_weight="4" />
+	</LinearLayout>
+	
+	<LinearLayout
+	    android:id="@+id/socialMedia_view_container"
+	    style="@style/PanelViewContainer">
+	    <View
+	        style="@style/PanelVerticalSpacer"
+	        android:layout_weight="4" />
+	    <LinearLayout 
+	        android:orientation="horizontal"
+	        android:layout_width="match_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="1"
+	        android:weightSum="10">
+	        <View 
+	            style="@style/PanelHorizontalSpacer"
+	            android:layout_weight="3" />
+	        <ImageView 
+	            style="@style/PanelImageView"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="2"
+	            android:src="@drawable/facebook"/>
+	        <ImageView 
+	            style="@style/PanelImageView"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="2"
+	            android:src="@drawable/twitter"/>
+	        <View 
+	            style="@style/PanelHorizontalSpacer"
+	            android:layout_weight="3" />
+	    </LinearLayout>
+	    <LinearLayout 
+	        android:orientation="horizontal"
+	        android:layout_width="match_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="1"
+	        android:weightSum="10">
+	        <View 
+	            style="@style/PanelHorizontalSpacer"
+	            android:layout_weight="3" />
+	        <TextView
+	            style="@style/PanelTextView"
+	            android:layout_height="match_parent"
+	            android:layout_width="0dp"
+	            android:layout_weight="2"
+	            android:text="@string/default_socialMediaFacebook_text" />
+	        <TextView
+	            style="@style/PanelTextView"
+	            android:layout_height="match_parent"
+	            android:layout_width="0dp"
+	            android:layout_weight="2"
+	            android:text="@string/default_socialMediaTwitter_text" />
+	        <View 
+	            style="@style/PanelHorizontalSpacer"
+	            android:layout_weight="3" />
+	    </LinearLayout>
+	    <View
+	        style="@style/PanelVerticalSpacer"
+	        android:layout_weight="4" /> 
+	</LinearLayout>
+
+</RelativeLayout>
